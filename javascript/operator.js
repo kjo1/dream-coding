@@ -165,3 +165,38 @@ for (let i = 0; i < 10; i++) {
 		console.log(`i: ${i}, j:${j}`);
 	}
 }
+
+// break, continue
+// Q1. iterate from 0 to 10 and print only even numbers (use continue)
+// !  mine
+for (let i = 0; i < 11; i++) {
+	if (i % 2) {
+		continue;
+	} else {
+		console.log(i);
+	}
+
+	// ! from the lecture
+	if (i % 2 === 0) {
+		console.log(`q1. ${i}`);
+	}
+}
+
+// Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break)
+// ! mine
+let i2 = 0;
+while (i2 < 11) {
+	console.log(`while: ${i2}`);
+	i2++;
+	if (i2 > 8) {
+		break;
+	}
+}
+
+// ! from the lecture
+for (let i = 0; i < 11; i++) {
+	if (i > 8) {
+		break;
+	}
+	console.log(`q2. ${i}`);
+}
