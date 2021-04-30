@@ -165,26 +165,22 @@ const simpleMultiply = (a, b) => {
 // function calculate(command, a, b)
 // command: add, substract, divide, multiply, remainder
 
+// * my try
 function calculate(command, a, b) {
 	switch (command) {
 		case 'add':
-			'';
 			console.log(`add: ${a + b}`);
 			break;
 		case 'substract':
-			'';
 			console.log(`substract: ${a - b}`);
 			break;
 		case 'divide':
-			'';
 			console.log(`divide: ${a / b}`);
 			break;
 		case 'multiply':
-			'';
 			console.log(`multiply: ${a * b}`);
 			break;
 		case 'remainder':
-			'';
 			console.log(`remainder: ${a % b}`);
 			break;
 		default:
@@ -194,3 +190,23 @@ function calculate(command, a, b) {
 }
 
 calculate('remainder', 2, 3);
+
+// * tutorial
+function calculate(command, a, b) {
+	switch (command) {
+		case 'add':
+			return a + b;
+		case 'substract':
+			return a - b;/
+		case 'divide':
+			return a / b;
+		case 'multiply':
+			return a * b;
+		case 'remainder':
+			return a % b;
+		default:
+			throw Error('unknown command')
+	}
+}
+
+console.log(calculate('add', 2 ,3));
