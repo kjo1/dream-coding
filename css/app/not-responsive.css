@@ -1,33 +1,33 @@
 h1 {
-  font-size: 28px;
-  color: burlywood;
-  margin: auto;
-  text-align: center;
+	font-size: 1.75rem;
+	color: burlywood;
+	margin: auto;
+	text-align: center;
 }
 
 .container {
-  display: flex;
-  padding: 32px;
+	display: flex;
+	padding: 2em;
 }
 
 .component {
-  border: 1px solid burlywood;
-  margin: 16px;
+	border: 1px solid burlywood;
+	margin: 1em;
 }
 
 .title {
-  font-size: 24px;
-  padding: 16px;
-  background-color: burlywood;
+	font-size: 1.5rem;
+	padding: 1em;
+	background-color: burlywood;
 }
 
 .contents {
-  font-size: 18px;
-  padding: 16px;
+	font-size: 1.125rem;
+	padding: 1em;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
+@media screen and (max-width: 48rem) {
+	.container {
+		flex-direction: column;
+	}
 }
