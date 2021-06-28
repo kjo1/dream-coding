@@ -22,30 +22,45 @@
 }
 
 body {
-	margin-top: 10%;
+	margin-top: 100px;
 }
 
 .logo {
 	display: flex;
 	align-items: center;
 	margin: auto;
+	border: none;
 }
 
 .filterList {
 	display: flex;
-	justify-content: space-between;
-	margin: 5px 30%;
+	justify-content: center;
+	margin: 5px auto;
 }
 
-.filterList > img {
-	width: 55px;
+.btn > img {
+	width: 60px;
 }
 
 .btn {
 	border: none;
+	margin: 5px;
+	transition: transform var(--animation-duration) ease;
+}
+
+.filterList > button,
+button {
+	transition: transform 300ms ease;
+}
+
+button:hover {
+	transform: scale(1.1);
+}
+
+.colorBtn {
 	border-radius: 3px;
 	font-size: var(--font-size);
-	padding: 5px 15px;
+	padding: 0px 20px;
 }
 
 .blueBtn {
@@ -58,4 +73,8 @@ body {
 
 .pinkBtn {
 	background-color: var(--color-pink);
+}
+
+.item {
+	overflow-y: 70%;
 }
