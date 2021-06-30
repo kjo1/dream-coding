@@ -12,60 +12,54 @@
 	--size-button: 60px;
 	--size-border: 4px;
 	--size-thumbnail: 50px;
-	--font-size: 18px;
-}
+	--size-font: 18px;
 
-* {
-	box-sizing: border-box;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	background-color: var(--color-black);
+	/* animation  */
+	--animation-duration: 300ms;
 }
 
 body {
-	margin-top: 100px;
-}
-
-/* logo */
-.logo {
+	height: 100vh;
+	background-color: var(--color-black);
 	display: flex;
-	align-items: center;
-	margin: auto;
-	border: none;
-}
-
-/* buttons */
-.filterList {
-	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	margin: 5px auto;
+	align-items: center;
 }
 
-.filterList > .btn {
-	margin: 5px;
-}
-
-.imgBtn {
-	width: 60px;
+.logo {
+	cursor: pointer;
+	transition: transform var(--animation-duration) ease;
 }
 
 .btn {
+	background-color: transparent;
 	border: none;
+	outline: none;
+	cursor: pointer;
 	transition: transform var(--animation-duration) ease;
-	transition: transform 300ms ease;
+	margin-right: var(--base-space);
 }
 
-.btn:hover {
+.btn:hover,
+.logo:hover {
 	transform: scale(1.1);
 }
 
+.buttons {
+	display: flex;
+	align-items: center;
+}
+
+.imgBtn {
+	width: var(--size-button);
+	height: var(--size-button);
+}
+
 .colorBtn {
-	border-radius: 3px;
-	font-size: var(--font-size);
-	padding: 0px 20px;
+	font-size: var(--size-font);
+	padding: calc(var(--base-space) * 2);
+	border-radius: var(--size-border);
 }
 
 .blueBtn {
@@ -80,32 +74,28 @@ body {
 	background-color: var(--color-pink);
 }
 
-/* item list */
 .items {
-	margin: 1% 20%;
+	width: 60%;
+	height: 60%;
 	list-style: none;
-	overflow-y: hidden scroll;
-	max-height: 500px;
-	overflow-x: hidden;
-}
-
-.item__thumbnail {
-	width: 50px;
-	background-color: var(--color-white);
+	padding-left: 0;
+	overflow-y: scroll;
 }
 
 .item {
-	display: flex;
-	justify-content: start;
+	background-color: var(--color-white);
 	display: flex;
 	align-items: center;
-	background-color: var(--color-white);
-	width: 100%;
-	padding: 5px;
-	margin: 10px;
+	padding: var(--base-space);
+	margin-bottom: var(--base-space);
+}
+
+.item__thumbnail {
+	width: var(--size-thumbnail);
+	height: var(--size-thumbnail);
 }
 
 .item__description {
-	margin-left: 5px;
-	background-color: var(--color-white);
+	margin-left: var(--base-space);
+	font-size: var(--size-font);
 }
