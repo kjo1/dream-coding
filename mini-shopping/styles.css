@@ -29,6 +29,7 @@ body {
 	margin-top: 100px;
 }
 
+/* logo */
 .logo {
 	display: flex;
 	align-items: center;
@@ -36,28 +37,28 @@ body {
 	border: none;
 }
 
+/* buttons */
 .filterList {
 	display: flex;
 	justify-content: center;
 	margin: 5px auto;
 }
 
-.btn > img {
+.filterList > .btn {
+	margin: 5px;
+}
+
+.imgBtn {
 	width: 60px;
 }
 
 .btn {
 	border: none;
-	margin: 5px;
 	transition: transform var(--animation-duration) ease;
-}
-
-.filterList > button,
-button {
 	transition: transform 300ms ease;
 }
 
-button:hover {
+.btn:hover {
 	transform: scale(1.1);
 }
 
@@ -79,6 +80,32 @@ button:hover {
 	background-color: var(--color-pink);
 }
 
+/* item list */
+.items {
+	margin: 1% 20%;
+	list-style: none;
+	overflow-y: hidden scroll;
+	max-height: 500px;
+	overflow-x: hidden;
+}
+
+.item__thumbnail {
+	width: 50px;
+	background-color: var(--color-white);
+}
+
 .item {
-	overflow-y: 70%;
+	display: flex;
+	justify-content: start;
+	display: flex;
+	align-items: center;
+	background-color: var(--color-white);
+	width: 100%;
+	padding: 5px;
+	margin: 10px;
+}
+
+.item__description {
+	margin-left: 5px;
+	background-color: var(--color-white);
 }
