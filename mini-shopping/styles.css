@@ -62,15 +62,15 @@ body {
 	border-radius: var(--size-border);
 }
 
-.blueBtn {
+.btnBlue {
 	background-color: var(--color-blue);
 }
 
-.yellowBtn {
+.btnYellow {
 	background-color: var(--color-yellow);
 }
 
-.pinkBtn {
+.btnPink {
 	background-color: var(--color-pink);
 }
 

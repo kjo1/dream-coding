@@ -21,6 +21,25 @@ function createHTMLString(item) {
   `;
 }
 
+function onButtonClick(event, items) {
+	const dataset = event.target.dataset;
+	const key = dataset.key;
+	const value = dataset.value;
+
+	if (key == null || value == null) {
+		return;
+	}
+
+	displayItems(items.filter((item) => item[key] === value));
+}
+
+function setEventListeners(items) {
+	const logo = document.querySelector('.logo'),
+		buttons = document.querySelector('.buttons');
+	logo.addEventListener('click', () => displayItems(items));
+	buttons.addEventListener('click', () => onButtonClick(event, items));
+}
+
 // main
 loadItems()
 	.then((items) => {
