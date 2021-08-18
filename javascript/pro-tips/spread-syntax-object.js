@@ -26,4 +26,5 @@ const newObject2 = {
 const shirt0 = Object.assign(item, detail);
 
 // ✅ Better! Code ✨
+// ? when use spread syntax you can change values
 const shirt = { ...item, ...detail, price: 40 };
